@@ -1,0 +1,176 @@
+:root {
+    --font-primary: "Outfit", sans-serif;
+    --font-title: "Young Serif", serif;
+    --White: hsl(0, 0%, 100%);
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+    --Brown-800: hsl(14, 45%, 36%);
+    --Rose-800: hsl(332, 51%, 32%);
+    --BrownLight: rgba(133, 69, 50, 0.158);
+    --RoseLighter: hsla(332, 39%, 46%, 0.034);
+    --Rose-50: hsl(330, 100%, 98%);
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.5;
+    background: var(--Stone-100);
+    color: var(--Stone-900)
+        /* -webkit-font-smoothing: antialiased; */
+}
+
+a {
+    color: var(--Brown-800)
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+
+/* 5. Improve media defaults */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+p,
+h1,
+h2 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+    margin-block: 1rem;
+}
+
+h1,
+h2 {
+    font-family: var(--font-title);
+    letter-spacing: .5px;
+    text-wrap: balance;
+}
+
+strong {
+    color: var(--Stone-900);
+}
+
+.container {
+    margin: 7rem auto;
+    background-color: var(--Rose-50);
+    max-width: 50rem;
+    border-radius: 1rem;
+    padding: 2.5rem;
+}
+
+.recipe__cover {
+    border-radius: 1rem;
+    border: 1px solid var(--Stone-100);
+}
+
+h1 {
+    font-size: 2.6rem;
+    margin-block: 2rem;
+    font-weight: 500;
+    color: var(--Stone-900);
+}
+
+h2 {
+    margin-block: 2.2rem;
+    font-weight: 500;
+    color: var(--Brown-800);
+}
+
+.recipe__durations {
+    padding: 2rem;
+    background-color: var(--RoseLighter);
+    border-radius: 1rem;
+}
+
+
+.recipe__durations h3 {
+    color: var(--Rose-800);
+    margin-bottom: 1rem;
+
+}
+
+li {
+    padding-left: .8em;
+    margin-bottom: .5rem;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+li::marker {
+    color: red;
+    color: var(--Brown-800);
+}
+
+.nutrition {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: .6rem;
+}
+
+.nutrition dd,
+.nutrition dt {
+    border-bottom: 1px solid var(--BrownLight);
+    padding: .8rem 1.3rem;
+}
+
+
+.nutrition dd {
+    font-weight: 700;
+    color: var(--Brown-800);
+}
+
+footer {
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    color: var(--Stone-600);
+    flex-direction: column;
+    font-size: .9rem;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .container {
+        margin: 0;
+        border-radius: 0;
+        padding: 1rem;
+        padding-top: 0;
+        overflow-x: hidden;
+    }
+
+    .recipe__cover {
+        border-radius: 0;
+        scale: 1.2;
+    }
+
+    .recipe__durations {
+        scale: 1.1;
+        border-radius: 0;
+        margin-top: 2rem;
+    }
+}
