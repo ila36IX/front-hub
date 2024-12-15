@@ -1,0 +1,75 @@
+:root {
+    --gray: rgb(40, 44, 55);
+    --grayLight: #69646a;
+    --white: rgb(246, 246, 246);
+    /* --glassy-background: radial-gradient(circle, rgba(246, 246, 246. 0.4) 50%, rgba(246, 246, 246, 0.7) 70%, rgba(40, 44, 55, 0.9) 100%); */
+    --glassy-background: linear-gradient(120deg, rgba(246, 246, 246. 0.4) 50%, rgba(246, 246, 246, 0.7) 70%, rgba(246, 246, 246, 0.9) 100%);
+    --yallow: #f7d703;
+    --card--size: 90px;
+    --green-army: #595959;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+
+    background: linear-gradient(180deg, rgba(54, 53, 53, 0.377) 50%, rgba(41, 39, 39, 0.3) 90%, rgba(201, 196, 196, 0.137) 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(255, 255, 255, 0.233);
+    padding: 4rem;
+}
+
+.step {
+    width: var(--card--size);
+    height: var(--card--size);
+    border: 2px solid var(--yallow);
+    background-color: var(--green-army);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    width: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url(./assets/dark-jungle.png);
+}
+
+.row__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.steps__linker--size1 {
+    height: 4px;
+    width: calc(var(--card--size));
+    background-color: rgba(255, 255, 255, 0.342);
+}
+
+.steps__linker--size2 {
+    height: 4px;
+    width: calc(var(--card--size) * 3);
+    background-color: rgba(255, 255, 255, 0.342);
+}
+
+.ring {
+    border: 4px solid #938e948c;
+    width: 65px;
+    height: 65px;
+}
