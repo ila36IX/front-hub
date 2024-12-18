@@ -3,11 +3,13 @@
     --dark: #152222;
     --gray: #d5d5d5;
     --grayLight: #69646a;
+    --lightBorder: rgba(255, 255, 255, 0.1);
     --white: rgb(246, 246, 246);
     /* --glassy-background: radial-gradient(circle, rgba(246, 246, 246. 0.4) 50%, rgba(246, 246, 246, 0.7) 70%, rgba(40, 44, 55, 0.9) 100%); */
     --glassy-background: linear-gradient(120deg, rgba(246, 246, 246. 0.4) 50%, rgba(246, 246, 246, 0.7) 70%, rgba(246, 246, 246, 0.9) 100%);
+    --grided-gradaint: repeating-linear-gradient(135deg, #626a67c7 4%, #5e6462c7 6%), conic-gradient(from 135deg at 100% 39%, #1d4e5f45 0%, #15222255 20%), 10% 26% / 100% auto repeat radial-gradient(farthest-corner at 3% 7%, #2d34346e 0%, #2c343411 72%, #2c343499 100%);
     --yallow: #f7d703;
-    --step--size: 4rem;
+    --step--size: 5rem;
     --green-army: #595959;
     --linker-dash: rgba(255, 255, 255, 0.342);
     --gradieant-gray: linear-gradient(178deg, rgba(40, 41, 41, 0.9) 0%, rgba(52, 52, 51, .5) 82%, rgba(79, 80, 82, 0.3) 100%);
@@ -35,6 +37,15 @@ body {
     background: 100% 100%;
     background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
     background: radial-gradient(49% 81% at 45% 47%, #1d4e5f45 24%, #1d4e5f45 35%, #073AFF00 100%), radial-gradient(113% 91% at 17% -2%, #2B261FAA 16%, #FF000000 99%), radial-gradient(142% 91% at 83% 7%, #2b261fAA 52%, #FF000000 99%), radial-gradient(142% 91% at -6% 74%, #020303FF 1%, #FF000000 99%), radial-gradient(142% 91% at 111% 84%, #020303FF 0%, #1d4e5fFF 99%);
+}
+
+.glassy-background {
+    background: linear-gradient(180deg, rgba(75, 73, 73, 0.1) 50%, rgba(41, 39, 39, 0.5) 70%, rgba(201, 196, 196, 0.120) 100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
 }
 
 body::before {
@@ -73,18 +84,24 @@ body::before {
     opacity: .3;
 }
 
-.glassy-background {
-    background: linear-gradient(180deg, rgba(75, 73, 73, 0.1) 50%, rgba(41, 39, 39, 0.5) 70%, rgba(201, 196, 196, 0.120) 100%);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-top: 1px solid rgba(255, 255, 255, 0.01);
+
+
+.wrapper {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 2fr 9fr 5fr;
+    grid-template-rows: 1fr;
+    gap: .4rem;
+    align-items: stretch;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
 }
 
 /* tree styles */
 .steps-tree--wrapper {
-    /* width: 60rem; */
     background: linear-gradient(180deg, rgba(75, 73, 73, 0.1) 50%, rgba(41, 39, 39, 0.5) 70%, rgba(201, 196, 196, 0.120) 100%);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(1px);
@@ -98,6 +115,7 @@ body::before {
     display: flex;
     align-items: center;
     gap: var(--step--size);
+    height: 100%;
 }
 
 .tree__body {
@@ -108,7 +126,7 @@ body::before {
 
 .tree__body--row {
     display: flex;
-    width: fit-content
+    width: fit-content;
 }
 
 .steps__linker--sm {
@@ -274,28 +292,17 @@ body::before {
     margin-right: .8rem;
 }
 
-.wrapper {
-    width: 95%;
-    /* border: 1px solid var(--yallow); */
-    display: grid;
-    grid-template-columns: 2fr 9fr 5fr;
-    gap: .4rem;
-}
-
-
-.task__card {
-    background-color: red;
-}
-
 .project__card {
     color: var(--gray);
+    display: flex;
+    flex-direction: column;
 }
 
 .project__card--header {
     display: flex;
     align-items: center;
     padding: .5rem;
-    gap: .5rem
+    gap: .5rem;
 }
 
 .project__card--icon {
@@ -341,16 +348,99 @@ body::before {
 .project__card--desc p {
     padding: 4px;
     margin-block: 1rem;
-    font-size: 14px;
 }
 
-.project__card--requirement ul {
-    margin: 0;
-    padding: 0;
+.project__card--requirement {
+    margin-top: auto;
 }
 
 .project__card--requirement li {
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px solid var(--grayLight);
+    border-bottom: 1px solid var(--lightBorder);
+    padding: .7rem 4px;
+    font-size: 17px;
+    list-style: none;
+}
+
+.project__card--requirement li:last-child {
+    border-bottom: none;
+}
+
+.project__card--requirement li::before {
+    content: '✓';
+    font-size: 35px;
+    vertical-align: middle;
+    line-height: 20px;
+}
+
+.project__card--costs {
+    display: flex;
+    /* background: var(--gradieant-gray); */
+    background: var(--grided-gradaint);
+    background-blend-mode: overlay;
+    border-block: 1px solid var(--lightBorder);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px .8rem;
+}
+
+.project__card--costs strong {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.time-cost {
+    display: flex;
+    align-items: center;
+}
+
+.time-cost span {
+    font-size: 2.5rem;
+    color: var(--yallow);
+    position: relative;
+    top: 5px;
+}
+
+.time-cost img {
+    height: 2.5rem;
+    position: relative;
+    top: 3px;
+}
+
+.skill {
+    background-color: #161618;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: .5rem;
+    box-shadow: 0 0 10px var(--green-army);
+    border: 1px solid var(--grayLight);
+}
+
+.skill:first-child {
+    margin-top: 0;
+}
+
+.skill::before {
+    background-image: repeating-linear-gradient(90deg, rgba(246, 25, 25, 0.31) 0px, rgba(246, 25, 25, 0.31) 2px, rgba(236, 89, 89, 0.46) 2px, rgba(236, 89, 89, 0.46) 4px, rgba(255, 102, 102, 0.32) 4px, rgba(255, 102, 102, 0.32) 6px, rgba(236, 89, 89, 0.46) 6px, rgba(236, 89, 89, 0.46) 8px, rgba(83, 3, 3, 0.24) 8px, rgba(83, 3, 3, 0.24) 10px, rgba(252, 21, 21, 0.19) 10px, rgba(252, 21, 21, 0.19) 12px, rgba(236, 89, 89, 0.46) 12px, rgba(236, 89, 89, 0.46) 14px, rgba(246, 25, 25, 0.31) 14px, rgba(246, 25, 25, 0.31) 16px, rgba(83, 3, 3, 0.24) 16px, rgba(83, 3, 3, 0.24) 18px, rgba(255, 102, 102, 0.32) 18px, rgba(255, 102, 102, 0.32) 20px, rgba(252, 21, 21, 0.19) 20px, rgba(252, 21, 21, 0.19) 22px, rgba(252, 21, 21, 0.19) 22px, rgba(252, 21, 21, 0.19) 24px);
+    width: 10rem;
+    height: 10rem;
+    background-color: red;
+    position: relative;
+    z-index: 5;
+
+}
+
+.skill__img {
+    height: 6rem;
+    width: 6rem;
+    opacity: .8;
+}
+
+.skill__progression {
+    text-align: center;
+    display: block;
+    font-size: 2rem;
 }
