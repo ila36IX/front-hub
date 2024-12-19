@@ -67,3 +67,46 @@
     overflow-y: auto;
     padding: .4rem;
 }
+
+@media only screen and (max-width: 1200px) {
+    .wrapper {
+        display: flex;
+        max-height: unset;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .wrapper>* {
+        width: calc(100vh * 0.65)
+    }
+
+    .wrapper h1 {
+        display: block;
+        text-align: center;
+    }
+
+    .stats {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skill-points {
+        flex-wrap: wrap;
+    }
+
+    .stats__aquiredSkills {
+        margin-left: unset;
+        text-align: center;
+    }
+
+    .skills {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
