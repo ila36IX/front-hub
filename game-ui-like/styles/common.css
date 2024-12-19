@@ -1,0 +1,109 @@
+:root {
+    --white: #fff;
+    --dark: #152222;
+    --gray: #d5d5d5;
+    --grayLight: #69646a;
+    --lightBorder: rgba(255, 255, 255, 0.1);
+    --white: rgb(246, 246, 246);
+    /* --glassy-background: radial-gradient(circle, rgba(246, 246, 246. 0.4) 50%, rgba(246, 246, 246, 0.7) 70%, rgba(40, 44, 55, 0.9) 100%); */
+    --glassy-background: linear-gradient(120deg, rgba(246, 246, 246. 0.4) 50%, rgba(246, 246, 246, 0.7) 70%, rgba(246, 246, 246, 0.9) 100%);
+    --grided-gradaint: repeating-linear-gradient(135deg, #626a67c7 4%, #5e6462c7 6%), conic-gradient(from 135deg at 100% 39%, #1d4e5f45 0%, #15222255 20%), 10% 26% / 100% auto repeat radial-gradient(farthest-corner at 3% 7%, #2d34346e 0%, #2c343411 72%, #2c343499 100%);
+    --yallow: #f7d703;
+    --yallowLight: #978303;
+    --treeNodeSize: 5rem;
+    --green-army: #595959;
+    --linker-dash: rgba(255, 255, 255, 0.342);
+    --gradieant-gray: linear-gradient(178deg, rgba(40, 41, 41, 0.9) 0%, rgba(66, 66, 64, 0.692) 82%, rgba(79, 80, 82, 0.3) 100%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    font: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--yallowLight) #2B2B2B;
+}
+
+.scroll-bar::-webkit-scrollbar {
+    width: 14px;
+}
+
+.scroll-bar::-webkit-scrollbar-track {
+    background: var(--yallowLight);
+    border-radius: 0px;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+    background: var(--yallowLight);
+    border-radius: 0px;
+    border: 0px solid #555777;
+}
+
+
+
+img {
+    width: 100%;
+}
+
+body {
+    font-family: 'Forza';
+    color: var(--white);
+    background: 100% 100%;
+    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    background: radial-gradient(49% 81% at 45% 47%, #1d4e5f45 24%, #1d4e5f45 35%, #073AFF00 100%), radial-gradient(113% 91% at 17% -2%, #2B261FAA 16%, #FF000000 99%), radial-gradient(142% 91% at 83% 7%, #2b261fAA 52%, #FF000000 99%), radial-gradient(142% 91% at -6% 74%, #020303FF 1%, #FF000000 99%), radial-gradient(142% 91% at 111% 84%, #020303FF 0%, #1d4e5fFF 99%);
+}
+
+.glassy-background {
+    background: linear-gradient(180deg, rgba(75, 73, 73, 0.1) 50%, rgba(41, 39, 39, 0.5) 70%, rgba(201, 196, 196, 0.2) 100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://cdn.divize.io/images/css/noise-light.webp);
+    background-repeat: repeat;
+    visibility: visible;
+    opacity: .2;
+    pointer-events: none;
+
+}
+
+.container {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 3rem;
+    opacity: 1;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#303044 1px, transparent 1px), linear-gradient(to right, #303044 1px, #0f0f17 1px);
+    background-size: 30px 30px;
+    opacity: .3;
+}

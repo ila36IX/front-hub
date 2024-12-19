@@ -1,0 +1,221 @@
+.skill__infos {
+    display: flex;
+    align-items: center;
+    padding: .4rem;
+    font-weight: bold;
+    background: var(--gradieant-gray);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: none;
+}
+
+.skill__infos--icon {
+    border: 1px solid var(--gray);
+    aspect-ratio: 1;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill__infos--icon svg {
+    color: var(--white);
+    width: 2.6rem;
+    height: 2.6rem;
+    position: relative;
+    top: 2px;
+}
+
+.skill__infos--title {
+    font-size: 2rem;
+    margin-left: .5rem;
+    font-weight: bold;
+}
+
+.skill__infos--progressions {
+    margin-left: auto;
+    font-size: 2rem;
+    margin-right: .8rem;
+    font-weight: 400;
+}
+
+/* tree styles */
+
+/*
+This is the must simple tree that you can build:
+
+<div class="tree__wrapper">
+    <div class="tree__root">
+        <button class="tree-node"></button>
+    </div>
+
+    <div class="tree__body">
+        <div class="tree__body--row tree__body--row">
+            <button class="tree-node tree__connector--start-sm"></button>
+            <button class="tree-node tree__connector--lg"></button>
+        </div>
+
+        <div class="tree__body--row tree__body--rowLast">
+            <button class="tree-node tree__connector--start-sm ">
+                <!-- <img class="project__icon" src="./assets/gun.svg" />
+                <div class="project__progress">1 / 1</div> -->
+            </button>
+            <button class="tree-node tree__connector--sm tree-node-disable"></button>
+        </div>
+
+    </div>
+</div>
+*/
+
+.tree__wrapper {
+    background: linear-gradient(180deg, rgba(75, 73, 73, 0.1) 50%, rgba(41, 39, 39, 0.5) 70%, rgba(201, 196, 196, 0.120) 100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+    padding: 4rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--treeNodeSize);
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.tree-node {
+    width: var(--treeNodeSize);
+    height: var(--treeNodeSize);
+    border: 2px solid var(--yallow);
+    background-color: var(--green-army);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.tree-node::after {
+    cursor: auto;
+}
+
+.tree-node::before {
+    content: "";
+    position: absolute;
+    width: calc(var(--treeNodeSize) * 0.75);
+    height: calc(var(--treeNodeSize) * 0.75);
+    border: 4px solid var(--grayLight);
+}
+
+.tree__root {
+    position: relative;
+}
+
+.tree__root::after {
+    content: "";
+    width: calc(var(--treeNodeSize) * 1.07);
+    border-top: 4px solid var(--linker-dash);
+    position: absolute;
+    top: 50%;
+    left: 100%;
+}
+
+.tree__body {
+    display: flex;
+    gap: calc(var(--treeNodeSize) * 0.5);
+    flex-direction: column;
+}
+
+.tree__body--row {
+    display: flex;
+    width: fit-content;
+}
+
+.tree__connector--sm {
+    margin-left: calc(var(--treeNodeSize));
+}
+
+.tree__connector--lg {
+    margin-left: calc(var(--treeNodeSize) * 3);
+}
+
+.tree__connector--sm::after,
+.tree__connector--lg::after {
+    content: "";
+    height: 4px;
+    background-color: var(--linker-dash);
+    position: absolute;
+    top: 50%;
+    right: 100%;
+}
+
+.tree__connector--sm::after {
+    width: calc(var(--treeNodeSize) + 2px);
+}
+
+.tree__connector--lg::after {
+    width: calc(var(--treeNodeSize) * 3 + 2px);
+}
+
+.tree__connector--start-sm {
+    margin-left: calc(var(--treeNodeSize) * 0.5);
+}
+
+.tree__connector--start-lg {
+    margin-left: calc(var(--treeNodeSize) * 2.5);
+}
+
+.tree__connector--start-sm::after,
+.tree__connector--start-lg::after {
+    content: "";
+    height: calc(var(--treeNodeSize) * 1.5);
+    width: calc(var(--treeNodeSize) * 0.5);
+    border-left: 4px solid var(--linker-dash);
+    border-top: 4px solid var(--linker-dash);
+    position: absolute;
+    top: 50%;
+    right: 100%;
+}
+
+.tree__connector--start-lg::after {
+    width: calc(var(--treeNodeSize) * 2.5);
+}
+
+.tree__connector--start-sm::after {
+    width: calc(var(--treeNodeSize) * 0.5);
+}
+
+.tree__body--rowLast .tree__connector--start-sm::after,
+.tree__body--rowLast .tree__connector--start-lg::after {
+    border-left: none;
+}
+
+.project__icon {
+    width: calc(var(--treeNodeSize) * .9);
+    transform: scaleY(-1) rotate(180deg);
+    position: relative;
+    user-select: none;
+}
+
+.project__progress {
+    color: var(--gray);
+    position: absolute;
+    --p: 15px;
+    padding-right: 15px;
+    font-size: 1rem;
+    clip-path: polygon(0 0, calc(100% - var(--p)) 0, 100% 100%, 0 100%);
+    background: var(--dark);
+    padding-left: 5px;
+    bottom: -10px;
+    left: -8px;
+    border: 1px solid rgb(95, 95, 95);
+    user-select: none;
+    text-align: start;
+}
+
+.tree-node-disable {
+    opacity: 0.2;
+    border: 3px solid var(--gray);
+}

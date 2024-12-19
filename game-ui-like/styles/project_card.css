@@ -1,0 +1,105 @@
+.project__card h3 {
+    background: var(--gradieant-gray);
+    padding: 2px 4px;
+    border-block: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 1px -3px 4px -2px var(--grayLight);
+}
+
+.project__card--splitter {
+    margin-top: auto;
+}
+
+.project__card--header {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    gap: .5rem;
+    background: var(--gradieant-gray);
+}
+
+.project__card--icon {
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project__card--icon svg {
+    color: var(--white);
+    width: 3.5rem;
+    height: 3.5rem;
+    position: relative;
+    top: 2px;
+}
+
+.project__card--title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.project__card--img {
+    background-color: var(--dark);
+    background-image: url("https://pilgrimoutpost.techlandgg.com/img/rewards/dl1_last_hope.jpg");
+    background-repeat: no-repeat;
+    min-height: 10rem;
+    height: 10rem;
+    background-position: center;
+    background-size: cover;
+}
+
+.project__card--desc {
+    overflow: auto;
+    max-height: 25rem;
+    scrollbar-color: var(--grayLight) #2B2B2B;
+}
+
+
+.project__card--desc p {
+    padding: 4px;
+    margin-block: 1rem;
+}
+
+.project__card--requirement {
+    overflow-y: auto;
+    max-height: 10rem;
+    padding-bottom: 2rem;
+    scrollbar-color: var(--grayLight) #2B2B2B;
+}
+
+.project__card--requirement li {
+    border-bottom: 1px solid var(--lightBorder);
+    padding: .7rem 4px;
+    font-size: 17px;
+    list-style: none;
+}
+
+.project__card--requirement li:last-child {
+    border-bottom: none;
+}
+
+.project__card--requirement li::before {
+    content: '✓';
+    font-size: 35px;
+    vertical-align: middle;
+    line-height: 20px;
+}
+
+.project__card--costs {
+    display: flex;
+    background: var(--grided-gradaint);
+    background-blend-mode: overlay;
+    border-block: 1px solid var(--lightBorder);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px .8rem;
+}
+
+.project__card--costs strong {
+    font-size: 1.5rem;
+    font-weight: bold;
+}

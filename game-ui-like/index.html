@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/fonts/forza-font.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/tree.css">
+    <link rel="stylesheet" href="./styles/project_card.css">
+    <link rel="stylesheet" href="./styles/skills.css">
+    <link rel="stylesheet" href="./styles/grid_layout.css">
     <title>Sklls</title>
 </head>
 
@@ -34,14 +38,6 @@
                 </div>
             </div>
             <div class="skills">
-                <div class="skill">
-                    <img class="skill__img" src="./assets/css-target.png" />
-                    <span class="skill__progression">7/28</span>
-                </div>
-                <div class="skill">
-                    <img class="skill__img" src="./assets/css-target.png" />
-                    <span class="skill__progression">7/28</span>
-                </div>
                 <div class="skill skill__selected">
                     <img class="skill__img" src="./assets/css-target.png" />
                     <span class="skill__progression">7/28</span>
@@ -66,100 +62,36 @@
                         </svg>
 
                     </div>
-                    <span class="skill__infos--title">Css</span>
+                    <span class="skill__infos--title">Cascade</span>
                     <div class="skill__infos--progressions">1 / 69</div>
                 </div>
-                <div class="steps-tree--wrapper">
+
+                <div class="tree__wrapper">
                     <div class="tree__root">
-                        <div class="step">
-                            <img class="step__img" src="./assets/gun.svg" />
-                            <div class="step__tasks">1 / 1</div>
-                        </div>
+                        <button class="tree-node"></button>
                     </div>
                     <div class="tree__body">
-                        <div class="tree__body--row">
-                            <div class="step steps__linker--start-sm">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
-                            <div class="step steps__linker--sm">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
-                            <div class=" step steps__linker--sm">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
-
+                        <div class="tree__body--row tree__body--row">
+                            <button class="tree-node tree__connector--start-sm"></button>
+                            <button class="tree-node tree__connector--sm"></button>
+                            <button class="tree-node tree__connector--sm"></button>
+                            <button class="tree-node tree__connector--sm"></button>
                         </div>
-                        <div class="tree__body--row">
-                            <div class="step steps__linker--start-sm">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
-                            <div class="step steps__linker--sm">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
-                            <div class="step steps__linker--sm">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
-                            <div class="step steps__linker--sm">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
-                        </div>
-                        <div class="tree__body--row">
-                            <div class="step steps__linker--start-lg">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
-                            <div class="step steps__linker--sm">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
-                        </div>
-                        <div class="tree__body--row">
-                            <div class="step steps__linker--start-sm">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
-                            <div class="step steps__linker--sm step-disable">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
+                        <div class="tree__body--row tree__body--row">
+                            <button class="tree-node tree__connector--start-sm"></button>
+                            <button class="tree-node tree__connector--sm"></button>
+                            <button class="tree-node tree__connector--sm"></button>
+                            <button class="tree-node tree__connector--sm"></button>
                         </div>
 
-                        <div class="tree__body--row">
-                            <div class="step steps__linker--start-sm">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
-                            <div class="step steps__linker--sm step-disable">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
+                        <div class="tree__body--row tree__body--rowLast">
+                            <button class="tree-node tree__connector--start-sm ">
+                                <img class="project__icon" src="./assets/gun.svg" />
+                                <div class="project__progress">1 / 1</div>
+                            </button>
+                            <button class="tree-node tree__connector--sm tree-node-disable"></button>
                         </div>
 
-                        <div class="tree__body--row steps__row--last">
-                            <div class="step steps__linker--start-sm">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
-                            <div class="step steps__linker--lg">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
-                            <div class="step steps__linker--sm">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
-                            <div class="step steps__linker--sm step-disable">
-                                <img class="step__img" src="./assets/gun.svg" />
-                                <div class="step__tasks">1 / 1</div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -176,15 +108,17 @@
                     <div class="project__card--title">Stingy Shooter</div>
                 </header>
                 <div class="project__card--img"></div>
+                <h3>Description</h3>
                 <div class="project__card--desc">
-                    <h3>Description</h3>
+
                     <p>
                         Nobody really remembers who first thought of turning a street sign into a medieval-like battle
                         axe. But this makeshift weapon soon became a symbol of hope among the survivors
                     </p>
+
                 </div>
+                <h3 class="project__card--splitter">Requirement</h3>
                 <div class="project__card--requirement">
-                    <h3>Requirement</h3>
                     <ul>
                         <li>Level: 15</li>
                         <li>Level: 15</li>
