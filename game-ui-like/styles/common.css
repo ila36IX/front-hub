@@ -105,5 +105,5 @@ body::before {
     height: 100%;
     background-image: linear-gradient(#303044 1px, transparent 1px), linear-gradient(to right, #303044 1px, #0f0f17 1px);
     background-size: 30px 30px;
-    opacity: .3;
+    opacity: .18;
 }
