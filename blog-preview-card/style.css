@@ -1,0 +1,143 @@
+:root {
+    /* ------------- Colors ------------ */
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+
+    /* ------------- Fonts ------------ */
+    --fontFamily: "Figtree", sans-serif;
+    --fontSizeRoot: 16px;
+
+    /* ------------- Weights ------------ */
+    --fontWeightRoot: 500;
+    --fontWeightBold: 800;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: var(--fontSizeRoot);
+}
+
+body {
+    font-family: var(--fontFamily);
+    color: var(--gray-950);
+    background: var(--yellow);
+    height: calc(100% - 2px);
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    border: 2px solid var(--gray-950);
+    width: 24rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 8px 8px 0 0px var(--gray-950);
+    background: var(--white);
+}
+
+.card__infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__info--img {
+    border-radius: 8px;
+
+}
+
+.card__infos--labels {
+    margin-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.card__infos--label {
+    border-radius: 4px;
+    background: var(--yellow);
+    padding: 5px 10px;
+    font-weight: var(--fontWeightBold);
+    font-size: 14px;
+}
+
+.card__infos--date {
+    font-size: 0.80rem;
+    font-weight: var(--fontWeightRoot);
+}
+
+.card__content--title {
+    font-size: 1.5rem;
+    font-weight: var(--fontWeightBold);
+    margin-block: 0.5rem 0.7rem;
+}
+
+.card__content--text {
+    color: var(--gray-500);
+}
+
+.card__author {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card__author--img {
+    width: 2rem;
+    aspect-ratio: 1;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+footer a {
+    color: var(--gray-500);
+    text-decoration: underline;
+    font-weight: var(--fontWeightBold);
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
