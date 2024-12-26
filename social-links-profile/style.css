@@ -1,0 +1,138 @@
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+    --font-primary: "Inter";
+    --font-WeightRoot: 400;
+    --font-WeightBold: 600;
+    --font-WeightBolder: 700;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.5;
+    background: var(--grey-900);
+    color: var(--white);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+
+/* 5. Improve media defaults */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+p,
+h1,
+h2 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+    margin-block: 1rem;
+}
+
+h1,
+h2 {
+    letter-spacing: .5px;
+    text-wrap: balance;
+}
+
+.container {
+    width: 100wh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.card {
+    background-color: var(--grey-800);
+    border-radius: 10px;
+    padding: 2.5rem 2rem;
+    min-width: 25rem;
+}
+
+.card__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__head--img {
+    border-radius: 50%;
+    width: 90px;
+    aspect-ratio: 1;
+}
+
+.card__head--fullName {
+    margin-top: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: var(--font-WeightBold);
+}
+
+.card__head--address {
+    color: var(--green);
+    font-weight: var(--font-WeightBold);
+}
+
+.card__head--desc {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 1.8rem;
+}
+
+.card__head--desc::before,
+.card__head--desc::after {
+    content: '"';
+}
+
+.menu__links {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem
+}
+
+.menu__link {
+    font-weight: var(--font-WeightBolder);
+    background-color: var(--grey-700);
+    width: 100%;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: .8rem .5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.menu__link:hover {
+    background-color: var(--green);
+    color: var(--grey-800);
+    transition: all 0.25s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 0;
+    }
+
+    .card {
+        min-width: unset;
+    }
+}
