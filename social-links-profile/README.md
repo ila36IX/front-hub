@@ -7,9 +7,14 @@ This is a solution to the [Social links profile on Frontend Mentor](https://www.
 
 ### Links
 
-- Live Site URL: [](https://ila36ix.github.io/front-hub/social-links-profile/)
+- Live Site URL: [Social links profile](https://ila36ix.github.io/front-hub/social-links-profile/)
 
 ## My process
+
+1. Inspecting the tree of the design
+2. Wrtting the html markup
+3. Styling the desktop version
+4. Make the css responsive
 
 ### Built with
 
