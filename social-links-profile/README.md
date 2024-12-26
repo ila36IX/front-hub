@@ -1,13 +1,13 @@
-# Frontend Mentor - Recipe page solution
+# Frontend Mentor - Social links profile
 
 This is a solution to the [Social links profile on Frontend Mentor](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm).
 ### Screenshot
 
-[Imgur](https://i.imgur.com/a8GfFPk.png)
+![Imgur](https://i.imgur.com/a8GfFPk.png)
 
 ### Links
 
-- Live Site URL: [](https://your-live-site-url.com)
+- Live Site URL: [](https://ila36ix.github.io/front-hub/social-links-profile/)
 
 ## My process
 
